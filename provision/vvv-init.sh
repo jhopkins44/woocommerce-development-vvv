@@ -100,7 +100,7 @@ PHP
   wp menu location assign primary-menu primary --allow-root
 
   echo "Adding basic menu items to the Primary Menu..."
-  wp menu item add-custom primary-menu Home http://local.woocommerce.dev/ --allow-root
+  wp menu item add-custom primary-menu Home http://{vvv_host}/ --allow-root
   wp menu item add-post primary-menu 4 --title='Blog' --allow-root
 
   # **
@@ -160,7 +160,7 @@ PHP
 
   # Replace any urls from the WordPress unit data
   echo 'Adjusting urls in database...\n'
-  wp search-replace 'wpthemetestdata.wordpress.com' 'local.woocommerce.dev' --skip-columns=guid --allow-root
+  wp search-replace 'wpthemetestdata.wordpress.com' '{vvv_host}' --skip-columns=guid --allow-root
 
   # Update the sites permalink structure
   echo 'Update permalink structure...\n'
